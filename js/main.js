@@ -3,7 +3,7 @@
 
   // ====== EDITE APENAS AQUI PARA PUBLICAR ======
   const CONFIG = {
-    whatsappUrl: 'https://chat.whatsapp.com/SEU-CODIGO-AQUI',
+    whatsappUrl: 'https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu',
     eventDate: '2026-10-19T20:00:00-03:00',
     fireMetaLeadOnClick: true
   };
@@ -40,7 +40,7 @@
       const position = cta.dataset.ctaPosition || 'unknown';
       trackClick(position);
 
-      if (CONFIG.whatsappUrl.includes('SEU-CODIGO-AQUI')) {
+      if (CONFIG.whatsappUrl.includes('CwWSyaBPHlkCArY6dXj4Zu')) {
         event.preventDefault();
         window.alert('Antes de publicar, substitua o link do grupo em js/main.js.');
       }
