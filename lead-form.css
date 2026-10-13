@@ -1,0 +1,17 @@
+/* Usa as variáveis do style.css da página (--accent, --ink, --line...) */
+.lf-lock{overflow:hidden}
+.lf-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(17,17,17,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.lf-overlay[hidden]{display:none}
+.lf-card{position:relative;width:100%;max-width:440px;max-height:calc(100dvh - 32px);overflow:auto;background:var(--white,#fff);color:var(--ink,#111);border-radius:var(--radius-lg,24px);padding:30px 26px 22px;box-shadow:var(--shadow,0 22px 60px rgba(0,0,0,.2))}
+.lf-title{margin:0 32px 8px 0;font-size:26px;line-height:1.05;letter-spacing:-.035em;font-weight:850}
+.lf-sub{margin:0 0 18px;color:var(--muted,#66615e);font-size:14px}
+.lf-card label{display:block;margin-bottom:13px;font-size:12px;font-weight:800;letter-spacing:.02em}
+.lf-card input,.lf-card select{display:block;width:100%;margin-top:6px;padding:14px 13px;font:inherit;font-size:16px;font-weight:500;color:var(--ink,#111);background:#fff;border:1px solid var(--line,#e9e4e1);border-radius:var(--radius-sm,12px)}
+.lf-card input:focus,.lf-card select:focus{outline:2px solid var(--accent,#f04838);outline-offset:1px}
+.lf-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.lf-erro{margin:0 0 10px;color:#c0271a;font-size:13px;font-weight:700}
+.lf-erro[hidden]{display:none}
+.lf-card .lf-btn{width:100%;margin-top:4px;border:0;cursor:pointer;font-family:inherit}
+.lf-card .lf-btn:disabled{opacity:.7;cursor:wait;transform:none}
+.lf-legal{margin:12px 0 0;color:var(--muted,#66615e);font-size:11px;line-height:1.45}
+.lf-close{position:absolute;top:10px;right:12px;width:38px;height:38px;border:0;background:none;font-size:30px;line-height:1;color:var(--muted,#66615e);cursor:pointer}
