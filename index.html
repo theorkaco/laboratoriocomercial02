@@ -19,6 +19,20 @@
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
 
+    <!-- PROTEGER DADOS TESTES  -->
+  <script>
+(function(){
+  try{
+    if(location.search.indexOf('teste=1')>-1) localStorage.setItem('lc_teste','1');
+    if(location.search.indexOf('teste=0')>-1) localStorage.removeItem('lc_teste');
+    if(localStorage.getItem('lc_teste')==='1') window.fbq=function(){};
+  }catch(e){}
+})();
+</script>
+
+     <!-- PROTEGER DADOS TESTES -->
+
+  
   <!--
     META PIXEL
     1) Cole o código-base oficial do seu Pixel aqui.
