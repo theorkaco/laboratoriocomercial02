@@ -5,7 +5,7 @@
   const CONFIG = {
     whatsappUrl: 'https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu',
     eventDate: '2026-10-19T20:00:00-03:00',
-    fireMetaLeadOnClick: true
+    fireMetaLeadOnClick: false
   };
   // =============================================
 
