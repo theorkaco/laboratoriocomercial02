@@ -40,10 +40,7 @@
       const position = cta.dataset.ctaPosition || 'unknown';
       trackClick(position);
 
-      if (CONFIG.whatsappUrl.includes('CwWSyaBPHlkCArY6dXj4Zu')) {
-        event.preventDefault();
-        window.alert('Antes de publicar, substitua o link do grupo em js/main.js.');
-      }
+      
     });
   });
 
