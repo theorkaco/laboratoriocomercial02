@@ -149,13 +149,14 @@ h3 {
   list-style: none;
 }
 .hero__audience li {
-  border: 1px solid var(--line);
-  background: var(--white);
-  border-radius: 999px;
-  padding: 8px 11px;
   font-size: 12px;
   font-weight: 750;
   color: #3d3835;
+}
+.hero__audience li + li::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--accent);
 }
 
 .hero__cta-wrap { max-width: 560px; }
@@ -662,7 +663,7 @@ h3 {
   h2 { font-size: clamp(31px, 10vw, 42px); }
   .hero__lead { font-size: 16px; line-height: 1.56; }
   .hero__audience { gap: 6px; }
-  .hero__audience li { font-size: 10px; padding: 7px 9px; }
+  .hero__audience li { font-size: 11px; }
   .hero__cta-wrap .btn { width: 100%; }
   .microcopy { align-items: flex-start; font-size: 10px; line-height: 1.4; }
   .flow-card { padding: 18px; border-radius: 20px; }
