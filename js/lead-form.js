@@ -5,7 +5,7 @@
 
   var CONFIG = {
     SUPABASE_URL: 'https://SEU-PROJETO.supabase.co',
-    SUPABASE_ANON_KEY: 'SUA_CHAVE_ANON_PUBLICA',
+    SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9waGlma3ZsZHJ3Z25mb3F6aWtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5MzEwMzAsImV4cCI6MjEwNzUwNzAzMH0.pVYpM9jTlBn9tSWS3PiqA5fkbC8To2NgCIeyUrFHFRw',
     TABELA: 'leads',
     QUALIFICADOS: ['80-150', '150+'], // faixas que disparam o evento Lead no Meta
     TIMEOUT_MS: 2500
