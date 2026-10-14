@@ -31,6 +31,44 @@
     }
   }
 
+    function getCookie(name) {
+    const match = document.cookie.match(
+      new RegExp('(^|; )' + name + '=([^;]*)')
+    );
+
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+
+  function sendMetaCapi() {
+    try {
+      const eventId =
+        'lead_' +
+        Date.now() +
+        '_' +
+        Math.random().toString(36).substring(2, 10);
+
+      fetch('/api/meta-capi', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        keepalive: true,
+        body: JSON.stringify({
+          event_id: eventId,
+          source_url: window.location.href,
+          user_agent: navigator.userAgent,
+          fbp: getCookie('_fbp'),
+          fbc: getCookie('_fbc')
+        })
+      }).catch(() => {
+        // Se a API falhar, não interfere no botão do WhatsApp.
+      });
+
+    } catch (error) {
+      // Nunca bloquear o usuário.
+    }
+  }
+  
   ctas.forEach((cta) => {
     cta.setAttribute('href', buildDestinationUrl());
     cta.setAttribute('target', '_blank');
@@ -39,8 +77,8 @@
     cta.addEventListener('click', (event) => {
       const position = cta.dataset.ctaPosition || 'unknown';
       trackClick(position);
+      sendMetaCapi();
 
-      
     });
   });
 
